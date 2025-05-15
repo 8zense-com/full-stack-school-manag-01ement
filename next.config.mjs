@@ -1,8 +1,22 @@
-/** @type {import('next').NextConfig} */
+import NextConfig from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+ 
 const nextConfig = {
+  env: {
+    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: "Carlo2024",
+    NEXT_PUBLIC_CLOUDINARY_PRESET_NAME: "school",
+  },
   images: {
-    remotePatterns: [{ hostname: "images.pexels.com" }],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        port: "", // Add port if required, leave empty for default
+        pathname: "/**", // Allows all paths under this hostname
+      },
+    ],
   },
 };
-
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+confirm
+export default withNextIntl(nextConfig);

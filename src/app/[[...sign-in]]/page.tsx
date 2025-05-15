@@ -1,27 +1,13 @@
-"use client";
+import { SignIn } from '@clerk/nextjs'
 
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-
-import * as Clerk from "@clerk/elements/common";
-import * as SignIn from "@clerk/elements/sign-in";
-import { useUser } from "@clerk/nextjs";
-
-const LoginPage = () => {
-  const { isLoaded, isSignedIn, user } = useUser();
-
-  const router = useRouter();
-
-  useEffect(() => {
-    const role = user?.publicMetadata.role;
-
-    if (role) {
-      router.push(`/${role}`);
-    }
-  }, [user, router]);
-
+export default function Page() {
   return (
+ HEAD
+  <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+  <SignIn />
+  </div>
+  
+}
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-plSkyLight to-white p-4">
       <SignIn.Root>
         <SignIn.Step
@@ -52,8 +38,8 @@ const LoginPage = () => {
           <div className="flex flex-col items-center justify-center mb-4 w-full">
             <div className="flex items-center justify-center space-x-3 mb-1">
               <Image 
-                src="/logo.png" 
-                alt="EduSphere Logo" 
+                src="/LogoEZ990svg" 
+                alt="8zene Logo" 
                 width={48} 
                 height={48} 
               />
@@ -146,3 +132,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+>>>>>>> 1b9d46923f22b140b0bec42c9228aa3f03adc020

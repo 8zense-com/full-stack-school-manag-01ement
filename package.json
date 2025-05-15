@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "upload": "node upload-sample-images.js"
   },
   "dependencies": {
     "@clerk/elements": "^0.14.6",
@@ -14,9 +16,11 @@
     "@hookform/resolvers": "^3.9.0",
     "@prisma/client": "^5.19.1",
     "@types/react-big-calendar": "^1.8.9",
+    "lucide-react": "^0.510.0",
     "moment": "^2.30.1",
     "next": "14.2.5",
     "next-cloudinary": "^6.13.0",
+    "next-intl": "^4.1.0",
     "prisma": "^5.19.1",
     "react": "^18",
     "react-big-calendar": "^1.13.2",
@@ -25,6 +29,7 @@
     "react-hook-form": "^7.52.2",
     "react-toastify": "^10.0.5",
     "recharts": "^2.12.7",
+    "tailwind-merge": "^3.3.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
