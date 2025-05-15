@@ -41,7 +41,7 @@ export default function HeroImage() {
 
   // Transform the image.
   myImage
-    .resize(fill(580, 2200))
+    .resize(fill(1700, 3000))
     .roundCorners(byRadius(0))
     .backgroundColor("black")
 
@@ -51,7 +51,7 @@ export default function HeroImage() {
           "#E3A40A",
         ),
       ).position(
-        new Position().gravity(compass("north_west")).offsetY(90).offsetX(110),
+        new Position().gravity(compass("north_west")).offsetY(110).offsetX(110),
       ),
     )
 
@@ -60,19 +60,17 @@ export default function HeroImage() {
       source(
         text(
           (t("Title")),
-          new TextStyle("bowlby one sc", 180)
+          new TextStyle("bowlby one sc", 160)
             .fontWeight("bold")
             .lineSpacing(-96)
             .textAlignment("justify")
-              
-            
-            
+                   
 
         ) .textColor(
           "#FFFFFF",
         )
       ).position(
-        new Position().gravity(compass("north_west")).offsetY(690).offsetX(110),
+        new Position().gravity(compass("north_west")).offsetY(280).offsetX(110),
       ),
     )
 
@@ -92,7 +90,7 @@ export default function HeroImage() {
           "#FFFFFF",
         )
       ).position(
-        new Position().gravity(compass("west")).offsetY(2590).offsetX(110),
+        new Position().gravity(compass("north_west")).offsetY(750).offsetX(110),
       ),
     )
 
