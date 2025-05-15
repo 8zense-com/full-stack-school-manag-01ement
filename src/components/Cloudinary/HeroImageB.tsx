@@ -36,17 +36,18 @@ export default function HeroImage() {
 
   // Use the image with public ID, 'sample'.
   const myImage = cld.image(
-"/ZV9iYWNrZ3JvdW5kX3JlbW92YWwvY19maWxsLGFyXzk6MTYsZl9wbmc_mxfqwl",
+"preview_vbmtzt",
   );
 
   // Transform the image.
   myImage
-  .resize(fill(1800,3600))
+    .resize(fill(580, 2200))
     .roundCorners(byRadius(0))
+    .backgroundColor("black")
 
     .overlay(
       source(
-        text((t("präTitle")), new TextStyle("bowlby one sc",170)).textColor(
+        text((t("präTitle")), new TextStyle("bowlby one sc",60)).textColor(
           "#E3A40A",
         ),
       ).position(
@@ -71,7 +72,7 @@ export default function HeroImage() {
           "#FFFFFF",
         )
       ).position(
-        new Position().gravity(compass("west")).offsetY(1190).offsetX(110),
+        new Position().gravity(compass("north_west")).offsetY(690).offsetX(110),
       ),
     )
 

@@ -18,5 +18,5 @@ const nextConfig = {
   },
 };
 const withNextIntl = createNextIntlPlugin();
-confirm
+
 export default withNextIntl(nextConfig);
