@@ -31,12 +31,12 @@ const cld = new Cloudinary({
 const t = useTranslations('Hero');
 
 // Use the image with public ID, 'sample'.
-const myImage = cld.image('Healthcare_Banner-2023_f5n9cu');
+const myImage = cld.image('hero-banner-Photoroom_wxmvus');
 
 
 // Transform the image.
 myImage
-  .resize(fill(1900, 900))
+  .resize(fill(3450, 1100))
   .roundCorners(byRadius(0))
 
   .overlay(   
@@ -45,7 +45,7 @@ myImage
       .textColor('orange')       
     )
     
-    .position(new Position().gravity(compass('north_west')).offsetY(560).offsetX(110)))
+    .position(new Position().gravity(compass('north')).offsetY(210).offsetX(410)))
 
   
   .overlay(   
@@ -74,9 +74,9 @@ myImage
   return(
     
     
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col justify-center items-center">
     
-      <Image src={myUrl} width={1980} height={900} alt="Transformed Image" className="text-white text-left" />
+      <Image src={myUrl} width={2180} height={900} alt="Transformed Image" className="text-white text-left" />
     </div>
     
     
