@@ -36,7 +36,7 @@ export default function HeroImage() {
 
   // Use the image with public ID, 'sample'.
   const myImage = cld.image(
-"preview_vbmtzt",
+"hero-banner-Photoroom_wxmvus",
   );
 
   // Transform the image.
